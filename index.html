@@ -6,13 +6,43 @@
 </head>
 <body>
     <script>
-        function computerPlay(){
+        function compPlay(){
 
-            let choices = ["Rock","Paper","Scissor"];
+            let choices = ["rock","paper","scissor"];
             return choices[Math.floor(Math.random()*choices.length)];
         }
 
-        console.log(computerPlay())
+        //User should enter their move
+        let playerPlay = (prompt("Rock, Paper or Scissor ?")).toLowerCase();
+        
+
+        function Play(player , comp){
+            if(computerPlay == playerPlay)
+                return ("Tie !")
+            else if(playerPlay == "rock"){
+                if(computerPlay == "scissor")
+                    return ("You win! Rock beats scissors!")
+                else
+                    return ("You lose! Paper beats rock!")
+            }
+            else if(playerPlay == "paper"){
+                if(computerPlay == "scissor")
+                   return ("You lose! scissor beats paper!")
+                else
+                    return ("You win! Paper beats rock!")
+            }       
+            else if(playerPlay == "scissor"){
+                if(computerPlay == "paper")
+                    return ("You win! scissor beats paper!")
+                else
+                    return ("You lose! rock beats scissor!")
+            } 
+        }
+
+        let computerPlay = compPlay()
+        console.log(Play(playerPlay, computerPlay));
+
+        console.log(computerPlay)
     </script>
 </body>
 </html>
