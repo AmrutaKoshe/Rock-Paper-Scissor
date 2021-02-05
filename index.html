@@ -10,6 +10,7 @@
         let playerScore = 0, computerScore = 0
         let playerPlay,computerPlay
 
+        //computer will choose randomly between rock,paper or scissor.
         function compPlay(){
 
             let choices = ["rock","paper","scissor"];
@@ -19,6 +20,8 @@
         function Play(player , comp){
             //User should enter their move
             let playerPlay = (prompt("Rock, Paper or Scissor ?")).toLowerCase();
+
+            //calculate points according to player and computer's moves.
             if(computerPlay == playerPlay)
                 return ("Tie !")
             else if(playerPlay == "rock"){
@@ -53,6 +56,7 @@
             } 
         }
 
+        //to have 5 rounds of the game.
         function game(){
             for(let i=0; i<5; i++){
                 computerPlay = compPlay()
