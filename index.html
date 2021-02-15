@@ -2,79 +2,30 @@
 <html>
 <head>
     <title>Rock Paper Scissor</title>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" >
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
 
-        let playerScore = 0, computerScore = 0
-        let playerPlay,computerPlay
+    <h1 id="comptext">COMPUTER</h1>
+    <div>
+        <button type="button">ROCK</button>
+        <button type="button">PAPER</button>
+        <button type="button">SCISSOR</button>
 
-        //computer will choose randomly between rock,paper or scissor.
-        function compPlay(){
+        <span>2</span>
+    </div>
 
-            let choices = ["rock","paper","scissor"];
-            return choices[Math.floor(Math.random()*choices.length)];
-        }
+    <div>
+        <button type="button">ROCK</button>
+        <button type="button">PAPER</button>
+        <button type="button">SCISSOR</button>
 
-        function Play(player , comp){
-            //User should enter their move
-            let playerPlay = (prompt("Rock, Paper or Scissor ?")).toLowerCase();
+        <span>0</span>
+    </div>
+    <h1 id="playtext">PLAYER</h1>
 
-            //calculate points according to player and computer's moves.
-            if(computerPlay == playerPlay)
-                return ("Tie !")
-            else if(playerPlay == "rock"){
-                if(computerPlay == "scissor"){
-                    playerScore ++
-                    return ("You win! Rock beats scissors!")
-                }
-                else{
-                    computerScore ++
-                    return ("You lose! Paper beats rock!")
-                }
-            }
-            else if(playerPlay == "paper"){
-                if(computerPlay == "scissor"){
-                    computerScore ++
-                   return ("You lose! scissor beats paper!")
-                }
-                else{
-                    playerScore ++
-                    return ("You win! Paper beats rock!")
-                }
-            }       
-            else if(playerPlay == "scissor"){
-                if(computerPlay == "paper"){
-                    playerScore ++
-                    return ("You win! scissor beats paper!")
-                }
-                else{
-                    computerScore ++
-                    return ("You lose! rock beats scissor!")
-                }
-            } 
-        }
+    <script src=""></script>
 
-        //to have 5 rounds of the game.
-        function game(){
-            for(let i=0; i<5; i++){
-                computerPlay = compPlay()
-                // console.log(computerPlay)
-                console.log(Play(playerPlay, computerPlay));
-                console.log("You: ",playerScore," Computer: ",computerScore)
-            }
-            if(playerScore > computerScore)
-                console.log("YOU WIN! ")
-            else if(playerScore < computerScore)
-                console.log("YOU LOSE! ")
-            else 
-                console.log("TIE!")
-
-        }
-
-        console.log(game())
-
-    </script>
 </body>
 </html>
