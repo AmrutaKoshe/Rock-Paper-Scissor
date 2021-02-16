@@ -11,7 +11,14 @@ document.getElementById("playScissor").addEventListener("click", playerMove);
 //display player's move
 function playerMove(){
 
-    document.getElementById(this.id).style.color = "blue";
+    //make the buttons default after each move
+    var buttons = document.getElementsByTagName("button");
+    for (var i = 0; i < buttons.length; i++) {
+    buttons[i].style.color = "";
+    }
+
+
+    document.getElementById(this.id).style.color = "red";
 
     //computer chooses its move
     function computerMove(){
@@ -73,6 +80,18 @@ function playerMove(){
     //display scores 
     document.getElementById("compScore").innerHTML = computerScore;
     document.getElementById("playScore").innerHTML = playerScore;
+
+    if(computerScore == 5){
+        alert("You lose!")
+        computerScore=0;
+        playerScore=0;
+    }
+
+    if(playerScore == 5){
+        alert("You win!")
+        computerScore=0;
+        playerScore=0;
+    }
 
 }
 
