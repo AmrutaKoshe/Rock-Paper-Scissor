@@ -37,8 +37,8 @@ button{
     margin: 3px;
 }
 
-.playAgain{
-    height: 40px;
-    width: 80px;
-    margin: 2px;
+#playAgain{
+    height: 30px;
+    width: 100px;
+    margin-left: 10px;
 }

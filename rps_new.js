@@ -43,7 +43,7 @@ function playerMove(){
     console.log(computerPlay);
     console.log(playerPlay);
 
-
+    //logic to calculate scores of player and computer
     if(computerPlay == playerPlay)
         document.getElementById('display').innerHTML = "TIE !"
     else if(playerPlay == "Rock"){
@@ -81,19 +81,44 @@ function playerMove(){
     document.getElementById("compScore").innerHTML = computerScore;
     document.getElementById("playScore").innerHTML = playerScore;
 
+    //if computer wins
     if(computerScore == 5){
-        document.getElementById("display").innerHTML = 'YOU LOSE! <button class="playAgain">Some text here</button>';
+        document.getElementById("display").innerHTML = 'YOU LOSE! <button id="playAgain">PLAY AGAIN</button>';
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].disabled = true;
+        }
+        document.getElementById("playAgain").disabled = false;
         computerScore=0;
         playerScore=0;
     }
 
+    //if player wins
     if(playerScore == 5){
-        document.getElementById('display').innerHTML = "YOU WIN! <button class='playAgain'>Some text here</button>";
+        document.getElementById('display').innerHTML = "YOU WIN! <button id='playAgain'>PLAY AGAIN</button>";
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].disabled = true;
+        }
+        document.getElementById("playAgain").disabled = false;
         computerScore=0;
         playerScore=0;
     }
 
 }
+
+//play again
+document.getElementById("playAgain").addEventListener("click", enableButtons);
+
+//enable all buttons
+function enableButtons() {
+
+    var buttons = document.getElementsByTagName("button");
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].disabled = false;
+    }
+    // document.getElementById('display').innerHTML = "START";
+}
+
+
 
 
 // playerPlay = playerMove();
