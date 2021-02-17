@@ -82,13 +82,13 @@ function playerMove(){
     document.getElementById("playScore").innerHTML = playerScore;
 
     if(computerScore == 5){
-        alert("You lose!")
+        document.getElementById("display").innerHTML = 'YOU LOSE! <button class="playAgain">Some text here</button>';
         computerScore=0;
         playerScore=0;
     }
 
     if(playerScore == 5){
-        alert("You win!")
+        document.getElementById('display').innerHTML = "YOU WIN! <button class='playAgain'>Some text here</button>";
         computerScore=0;
         playerScore=0;
     }
