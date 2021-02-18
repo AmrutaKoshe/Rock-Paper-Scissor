@@ -84,39 +84,65 @@ function playerMove(){
     //if computer wins
     if(computerScore == 5){
         document.getElementById("display").innerHTML = 'YOU LOSE! <button id="playAgain">PLAY AGAIN</button>';
+
+        //disable other buttons
         for (var i = 0; i < buttons.length; i++) {
             buttons[i].disabled = true;
         }
+
+        //play again should be enabled
         document.getElementById("playAgain").disabled = false;
+
+        //reset the scores
         computerScore=0;
         playerScore=0;
+
+        //play again event listener
+        document.getElementById('playAgain').addEventListener("click",enableButtons);
+
     }
 
     //if player wins
     if(playerScore == 5){
         document.getElementById('display').innerHTML = "YOU WIN! <button id='playAgain'>PLAY AGAIN</button>";
+
+        //disable other buttons
         for (var i = 0; i < buttons.length; i++) {
             buttons[i].disabled = true;
         }
+
+        //play again button should be enabled
         document.getElementById("playAgain").disabled = false;
+
+        //reset the scores
         computerScore=0;
         playerScore=0;
+
+        //play again event listener
+        document.getElementById('playAgain').addEventListener("click",enableButtons);
+    }
+
+
+    //enable all buttons
+    function enableButtons(){
+
+        document.getElementById('display').innerHTML = "START";
+
+        //enable all buttons
+        var buttons = document.getElementsByTagName("button");
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].disabled = false;
+        }
+
+        //display scores 
+        document.getElementById("compScore").innerHTML = computerScore;
+        document.getElementById("playScore").innerHTML = playerScore;
+        
     }
 
 }
 
-//play again
-document.getElementById("playAgain").addEventListener("click", enableButtons);
 
-//enable all buttons
-function enableButtons() {
-
-    var buttons = document.getElementsByTagName("button");
-    for (var i = 0; i < buttons.length; i++) {
-        buttons[i].disabled = false;
-    }
-    // document.getElementById('display').innerHTML = "START";
-}
 
 
 
