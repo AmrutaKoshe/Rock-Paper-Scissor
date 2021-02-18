@@ -132,11 +132,13 @@ function playerMove(){
         var buttons = document.getElementsByTagName("button");
         for (var i = 0; i < buttons.length; i++) {
             buttons[i].disabled = false;
+            buttons[i].style.color = "";
         }
 
         //display scores 
         document.getElementById("compScore").innerHTML = computerScore;
         document.getElementById("playScore").innerHTML = playerScore;
+
         
     }
 
