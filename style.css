@@ -1,3 +1,7 @@
+body{
+    /* background-color:#f0f0ff; */
+}
+
 div{
     margin: 8%;
     text-align: center;
@@ -5,15 +9,15 @@ div{
 
 p{
     text-align: center;
-    margin-top: -4%;
-    margin-bottom: -4%;
+    margin-top: -6%;
+    margin-bottom: -5%;
     font-size: 20px;
 }
 
 span{
     margin-left: 3%;
-    font-size: 60px;
-    vertical-align: middle;
+    font-size: 70px;
+
 }
 
 h1{
@@ -23,18 +27,31 @@ h1{
 
 #comptext{
     margin-top: 6%;
-    margin-bottom: -6%;
+    margin-bottom: -6.5%;
 }
 
 #playtext{
-    margin-top: -6%;
+    margin-top: -7%;
     margin-bottom: 6%;
 }
 
 button{
-    height: 80px;
-    width: 80px;
+    height: 110px;
+    width: 85px;
     margin: 3px;
+    background-size: 100%;
+}
+
+#playRock, #compRock{
+    background-image: url(rock.jpg);
+}
+
+#playPaper, #compPaper{
+    background-image: url(paper.jpg);
+}
+
+#playScissor, #compScissor{
+    background-image: url(scissor.jpg);
 }
 
 #playAgain{

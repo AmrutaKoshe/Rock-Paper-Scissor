@@ -19,6 +19,7 @@ function playerMove(){
 
 
     document.getElementById(this.id).style.color = "red";
+    // document.getElementById(this.id).style.background = "url(rock.webp)";
 
     //computer chooses its move
     function computerMove(){
