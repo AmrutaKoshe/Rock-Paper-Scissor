@@ -17,7 +17,7 @@ p{
 span{
     margin-left: 3%;
     font-size: 70px;
-
+    vertical-align:35%;
 }
 
 h1{
@@ -27,11 +27,11 @@ h1{
 
 #comptext{
     margin-top: 6%;
-    margin-bottom: -6.5%;
+    margin-bottom: -6%;
 }
 
 #playtext{
-    margin-top: -7%;
+    margin-top: -6%;
     margin-bottom: 6%;
 }
 
