@@ -1,5 +1,11 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(fonts/Clip.ttf);
+}
+
 body{
-    /* background-color:#f0f0ff; */
+    background-color:#252424;
+
 }
 
 div{
@@ -9,20 +15,30 @@ div{
 
 p{
     text-align: center;
-    margin-top: -6%;
+    margin-top: -5%;
     margin-bottom: -5%;
     font-size: 20px;
+    color: rgb(216, 209, 209);
 }
 
 span{
     margin-left: 3%;
     font-size: 70px;
     vertical-align:35%;
+    color: rgb(233, 221, 221);
+    width: 10px;
+    font-family: myFirstFont;
 }
 
 h1{
     margin: 0 auto;
     text-align: center;
+    color: rgb(255, 202, 233);
+    text-shadow: 0 0 10px rgb(255, 190, 228), 0 0 12px rgb(255, 202, 233);
+    font-family: myFirstFont;
+    font-weight: 100;
+    font-size: 45px;
+    
 }
 
 #comptext{
@@ -31,15 +47,26 @@ h1{
 }
 
 #playtext{
-    margin-top: -6%;
+    margin-top: -5.5%;
     margin-bottom: 6%;
 }
 
 button{
     height: 110px;
     width: 85px;
-    margin: 3px;
+    margin: 5px;
     background-size: 100%;
+    border: white 0.5px inset;
+    box-shadow: 0px 0px 2px white;
+}
+
+.playButton:hover{
+    border: white 1.8px inset;
+    opacity: 80%;
+}
+
+button:focus{
+    outline: none;
 }
 
 #playRock, #compRock{

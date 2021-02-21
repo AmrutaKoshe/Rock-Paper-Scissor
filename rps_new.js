@@ -14,12 +14,14 @@ function playerMove(){
     //make the buttons default after each move
     var buttons = document.getElementsByTagName("button");
     for (var i = 0; i < buttons.length; i++) {
-    buttons[i].style.color = "";
+    buttons[i].style.boxShadow = "";
+    buttons[i].style.border = "";
     }
 
 
-    document.getElementById(this.id).style.color = "red";
-    // document.getElementById(this.id).style.background = "url(rock.webp)";
+    document.getElementById(this.id).style.boxShadow = "0px 0px 10px #ffcc99, 0px 0px 10px #ffe6cc";
+    document.getElementById(this.id).style.border = "#ffbf80 0.8px solid";
+    // document.getElementById(this.id).style.backgroundImage = "url(paper.jpg)";
 
     //computer chooses its move
     function computerMove(){
@@ -30,8 +32,13 @@ function playerMove(){
     return computerPlay;
     }
 
+    //storing computer's choice in a variable
+    computerPlay = computerMove();
+
+
     //display computer's move
-    document.getElementById(computerMove()).style.color = "blue";
+    document.getElementById(computerPlay).style.boxShadow = "0px 0px 10px #ffcc99, 0px 0px 10px #ffe6cc";
+    document.getElementById(computerPlay).style.border = "#ffbf80 0.8px solid";
 
     //storing player's choice in a variable
     playerPlay = this.id;
@@ -40,9 +47,6 @@ function playerMove(){
     computerPlay = computerPlay.slice(4);
     playerPlay = playerPlay.slice(4);
 
-
-    console.log(computerPlay);
-    console.log(playerPlay);
 
     //logic to calculate scores of player and computer
     if(computerPlay == playerPlay)
@@ -133,7 +137,8 @@ function playerMove(){
         var buttons = document.getElementsByTagName("button");
         for (var i = 0; i < buttons.length; i++) {
             buttons[i].disabled = false;
-            buttons[i].style.color = "";
+            buttons[i].style.boxShadow = "";
+            buttons[i].style.border = "";
         }
 
         //display scores 
