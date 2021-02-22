@@ -4,8 +4,14 @@
 }
 
 body{
-    background-color:#252424;
-
+    /* background-color:#252424; */
+    /* background-image: url(https://image.freepik.com/free-vector/black-brick-wall-texture-illustration-using-as-background-wallpaper-with-copy-space_35669-166.jpg); */
+    /* background-image: url(https://wallpaperaccess.com/full/2372502.jpg); */
+    background-image: url(https://i.pinimg.com/originals/a0/f8/4d/a0f84d1a26dc6a9c65662ed146757a5f.jpg);
+    /* background-image: url(https://image.shutterstock.com/image-photo/abstract-black-brick-wall-texture-260nw-1376440778.jpg); */
+    background-size: cover;
+    width: 100%;
+    height: auto;
 }
 
 div{
@@ -24,9 +30,12 @@ p{
 span{
     margin-left: 3%;
     font-size: 70px;
+    display: inline-block;
+    width: 0px;
+    font-variant-numeric: tabular-nums;
     vertical-align:35%;
     color: rgb(233, 221, 221);
-    width: 10px;
+    letter-spacing: 1px;
     font-family: myFirstFont;
 }
 
@@ -37,7 +46,7 @@ h1{
     text-shadow: 0 0 10px rgb(255, 190, 228), 0 0 12px rgb(255, 202, 233);
     font-family: myFirstFont;
     font-weight: 100;
-    font-size: 45px;
+    font-size: 47px;
     
 }
 
@@ -57,12 +66,12 @@ button{
     margin: 5px;
     background-size: 100%;
     border: white 0.5px inset;
-    box-shadow: 0px 0px 2px white;
+    box-shadow: 0px 0px 5px white;
 }
 
 .playButton:hover{
-    border: white 1.8px inset;
-    opacity: 80%;
+    border: white 2px inset;
+    
 }
 
 button:focus{
