@@ -3,12 +3,14 @@
     src: url(fonts/Clip.ttf);
 }
 
+@font-face {
+    font-family: display;
+    src: url(fonts/TextMeOne-Regular.ttf);
+}
+
 body{
-    /* background-color:#252424; */
-    /* background-image: url(https://image.freepik.com/free-vector/black-brick-wall-texture-illustration-using-as-background-wallpaper-with-copy-space_35669-166.jpg); */
-    /* background-image: url(https://wallpaperaccess.com/full/2372502.jpg); */
+    background-color:#252424;
     background-image: url(https://i.pinimg.com/originals/a0/f8/4d/a0f84d1a26dc6a9c65662ed146757a5f.jpg);
-    /* background-image: url(https://image.shutterstock.com/image-photo/abstract-black-brick-wall-texture-260nw-1376440778.jpg); */
     background-size: cover;
     width: 100%;
     height: auto;
@@ -23,8 +25,11 @@ p{
     text-align: center;
     margin-top: -5%;
     margin-bottom: -5%;
-    font-size: 20px;
-    color: rgb(216, 209, 209);
+    font-size: 27px;
+    letter-spacing: -1px;
+    color: rgb(218, 222, 255);
+    text-shadow: 0 0 4px rgb(218, 222, 255), 0 0 8px rgb(224, 227, 250);
+    font-family: display;
 }
 
 span{
@@ -34,7 +39,8 @@ span{
     width: 0px;
     font-variant-numeric: tabular-nums;
     vertical-align:35%;
-    color: rgb(233, 221, 221);
+    color: rgb(153, 211, 206);
+    text-shadow: 0 0 7px rgb(153, 211, 194), 0 0 12px rgb(169, 218, 203);
     letter-spacing: 1px;
     font-family: myFirstFont;
 }
@@ -43,7 +49,7 @@ h1{
     margin: 0 auto;
     text-align: center;
     color: rgb(255, 202, 233);
-    text-shadow: 0 0 10px rgb(255, 190, 228), 0 0 12px rgb(255, 202, 233);
+    text-shadow: 0 0 8px rgb(255, 190, 228), 0 0 12px rgb(255, 202, 233);
     font-family: myFirstFont;
     font-weight: 100;
     font-size: 47px;
@@ -79,19 +85,26 @@ button:focus{
 }
 
 #playRock, #compRock{
-    background-image: url(rock.jpg);
+    background-image: url(images/rock.jpg);
 }
 
 #playPaper, #compPaper{
-    background-image: url(paper.jpg);
+    background-image: url(images/paper.jpg);
 }
 
 #playScissor, #compScissor{
-    background-image: url(scissor.jpg);
+    background-image: url(images/scissor.jpg);
 }
 
 #playAgain{
     height: 30px;
     width: 100px;
     margin-left: 10px;
+    margin-top: -1px;
+    background-color:#252424;
+    color: white;
+}
+
+#playAgain:hover{
+    border: white 2px inset;
 }
