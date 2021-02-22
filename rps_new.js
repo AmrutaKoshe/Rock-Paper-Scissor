@@ -8,6 +8,7 @@ document.getElementById("playRock").addEventListener("click", playerMove);
 document.getElementById("playPaper").addEventListener("click", playerMove);
 document.getElementById("playScissor").addEventListener("click", playerMove);
 
+
 //display player's move
 function playerMove(){
 
@@ -109,6 +110,10 @@ function playerMove(){
         //play again event listener
         document.getElementById('playAgain').addEventListener("click",enableButtons);
 
+        //play sound
+        var lose = document.getElementById('loseAudio');
+        lose.play();
+
     }
 
     //if player wins
@@ -129,6 +134,10 @@ function playerMove(){
 
         //play again event listener
         document.getElementById('playAgain').addEventListener("click",enableButtons);
+
+        //play sound
+        var win = document.getElementById('winAudio');
+        win.play();
     }
 
 
