@@ -18,10 +18,14 @@ function playerMove(){
     buttons[i].style.border = "";
     }
 
-
+    //display player's move
     document.getElementById(this.id).style.boxShadow = "0px 0px 10px #ffcc99, 0px 0px 10px #ffe6cc";
     document.getElementById(this.id).style.border = "#ffbf80 0.8px solid";
-    // document.getElementById(this.id).style.backgroundImage = "url(paper.jpg)";
+    
+    //play button sound
+    var sound = document.getElementById('clickAudio')
+    sound.currentTime = 0;
+    sound.play();
 
     //computer chooses its move
     function computerMove(){
@@ -145,25 +149,11 @@ function playerMove(){
         document.getElementById("compScore").innerHTML = computerScore;
         document.getElementById("playScore").innerHTML = playerScore;
 
+        //play button sound
+        var sound1 = document.getElementById('playAudio')
+        sound1.currentTime = 0;
+        sound1.play();
         
     }
 
 }
-
-
-
-
-
-
-// playerPlay = playerMove();
-
-
-    
-// //computer chooses its move
-// function computerMove(){
-//     let choices = ["compRock","compPaper","compScissor"];
-//     return choices[Math.floor(Math.random()*choices.length)];
-// }
-
-// //display computer's move
-// document.getElementById(computerMove()).style.color = "blue";
